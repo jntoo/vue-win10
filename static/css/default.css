@@ -23,7 +23,6 @@ body {
     height: 100%;
     background-size: 100% 100%;
     position: fixed;
-    z-index: -1;
     top:0;
     left:0;
 }
