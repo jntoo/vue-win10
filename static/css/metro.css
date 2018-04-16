@@ -1,0 +1,1687 @@
+.tile-area {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 120px 80px 0 0;
+    overflow: hidden;
+}
+.tile-area:before,
+.tile-area:after {
+    display: table;
+    content: "";
+}
+.tile-area:after {
+    clear: both;
+}
+.tile-area .tile-area-title {
+    position: fixed;
+    top: 20px;
+    left: 80px;
+    font-weight: 300;
+    font-size: 42px;
+    line-height: 1.1;
+}
+.tile-group {
+    margin-left: 80px;
+    min-width: 80px;
+    width: auto;
+    float: left;
+    display: block;
+    padding-top: 40px;
+    position: relative;
+}
+.tile-group.one {
+    width: 160px;
+}
+.tile-group.two,
+.tile-group.double {
+    width: 320px;
+}
+.tile-group.three,
+.tile-group.triple {
+    width: 480px;
+}
+.tile-group.four,
+.tile-group.quadro {
+    width: 640px;
+}
+.tile-group.five {
+    width: 800px;
+}
+.tile-group.six {
+    width: 960px;
+}
+.tile-group.seven {
+    width: 1120px;
+}
+.tile-group .tile-group-title {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+.tile-container {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.tile-container:before,
+.tile-container:after {
+    display: table;
+    content: "";
+}
+.tile-container:after {
+    clear: both;
+}
+.tile {
+    width: 150px;
+    height: 150px;
+    display: block;
+    float: left;
+    margin: 5px;
+    background-color: #eeeeee;
+    box-shadow: inset 0 0 1px #FFFFCC;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.tile:hover {
+    outline: #999999 solid 3px;
+}
+.tile:active {
+    outline: 0;
+}
+.tile.no-outline {
+    outline-color: transparent;
+}
+.tile.small-tile {
+    width: 70px;
+    height: 70px;
+}
+.tile.wide-tile {
+    width: 310px;
+    height: 150px;
+}
+.tile.wide-tile-v {
+    height: 310px;
+    width: 150px;
+}
+.tile.large-tile {
+    width: 310px;
+    height: 310px;
+}
+.tile.big-tile {
+    width: 470px;
+    height: 470px;
+}
+.tile.super-tile {
+    width: 630px;
+    height: 630px;
+}
+.tile-square {
+    width: 150px;
+    height: 150px;
+    display: block;
+    float: left;
+    margin: 5px;
+    background-color: #eeeeee;
+    box-shadow: inset 0 0 1px #FFFFCC;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: visible;
+}
+.tile-square:hover {
+    outline: #999999 solid 3px;
+}
+.tile-square:active {
+    outline: 0;
+}
+.tile-square.no-outline {
+    outline-color: transparent;
+}
+.tile-square.small-tile {
+    width: 70px;
+    height: 70px;
+}
+.tile-square.wide-tile {
+    width: 310px;
+    height: 150px;
+}
+.tile-square.wide-tile-v {
+    height: 310px;
+    width: 150px;
+}
+.tile-square.large-tile {
+    width: 310px;
+    height: 310px;
+}
+.tile-square.big-tile {
+    width: 470px;
+    height: 470px;
+}
+.tile-square.super-tile {
+    width: 630px;
+    height: 630px;
+}
+.tile-square .tile-content.flipVertical {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-square:hover .tile-content.flipVertical,
+.tile-square.hover .tile-content.flipVertical,
+.tile-square.flip .tile-content.flipVertical {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-square .tile-content.flipVertical {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-square .tile-content.flipVertical .slide,
+.tile-square .tile-content.flipVertical .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-square .tile-content.flipVertical .slide {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.tile-square .tile-content.flipVertical .slide-over {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-square .tile-content.flipHorizontal {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-square:hover .tile-content.flipHorizontal,
+.tile-square.hover .tile-content.flipHorizontal,
+.tile-square.flip .tile-content.flipHorizontal {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-square .tile-content.flipHorizontal {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-square .tile-content.flipHorizontal .slide,
+.tile-square .tile-content.flipHorizontal .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-square .tile-content.flipHorizontal .slide {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.tile-square .tile-content.flipHorizontal .slide-over {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-square .tile-badge {
+    position: absolute;
+    bottom: 0;
+    right: .625rem;
+    padding: .25rem .625rem;
+    z-index: 999;
+}
+.tile-square .tile-label {
+    position: absolute;
+    bottom: 0;
+    left: .625rem;
+    padding: .425rem .25rem;
+    z-index: 999;
+}
+.tile-small {
+    width: 150px;
+    height: 150px;
+    display: block;
+    float: left;
+    margin: 5px;
+    background-color: #eeeeee;
+    box-shadow: inset 0 0 1px #FFFFCC;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: visible;
+    width: 70px;
+    height: 70px;
+}
+.tile-small:hover {
+    outline: #999999 solid 3px;
+}
+.tile-small:active {
+    outline: 0;
+}
+.tile-small.no-outline {
+    outline-color: transparent;
+}
+.tile-small.small-tile {
+    width: 70px;
+    height: 70px;
+}
+.tile-small.wide-tile {
+    width: 310px;
+    height: 150px;
+}
+.tile-small.wide-tile-v {
+    height: 310px;
+    width: 150px;
+}
+.tile-small.large-tile {
+    width: 310px;
+    height: 310px;
+}
+.tile-small.big-tile {
+    width: 470px;
+    height: 470px;
+}
+.tile-small.super-tile {
+    width: 630px;
+    height: 630px;
+}
+.tile-small .tile-content.flipVertical {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-small:hover .tile-content.flipVertical,
+.tile-small.hover .tile-content.flipVertical,
+.tile-small.flip .tile-content.flipVertical {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-small .tile-content.flipVertical {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-small .tile-content.flipVertical .slide,
+.tile-small .tile-content.flipVertical .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-small .tile-content.flipVertical .slide {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.tile-small .tile-content.flipVertical .slide-over {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-small .tile-content.flipHorizontal {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-small:hover .tile-content.flipHorizontal,
+.tile-small.hover .tile-content.flipHorizontal,
+.tile-small.flip .tile-content.flipHorizontal {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-small .tile-content.flipHorizontal {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-small .tile-content.flipHorizontal .slide,
+.tile-small .tile-content.flipHorizontal .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-small .tile-content.flipHorizontal .slide {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.tile-small .tile-content.flipHorizontal .slide-over {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-small .tile-badge {
+    position: absolute;
+    bottom: 0;
+    right: .625rem;
+    padding: .25rem .625rem;
+    z-index: 999;
+}
+.tile-small .tile-label {
+    position: absolute;
+    bottom: 0;
+    left: .625rem;
+    padding: .425rem .25rem;
+    z-index: 999;
+}
+.tile-wide {
+    width: 150px;
+    display: block;
+    float: left;
+    margin: 5px;
+    background-color: #eeeeee;
+    box-shadow: inset 0 0 1px #FFFFCC;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: visible;
+    width: 310px;
+    height: 150px;
+}
+.tile-wide:hover {
+    outline: #999999 solid 3px;
+}
+.tile-wide:active {
+    outline: 0;
+}
+.tile-wide.no-outline {
+    outline-color: transparent;
+}
+.tile-wide.small-tile {
+    width: 70px;
+    height: 70px;
+}
+.tile-wide.wide-tile {
+    width: 310px;
+    height: 150px;
+}
+.tile-wide.wide-tile-v {
+    height: 310px;
+    width: 150px;
+}
+.tile-wide.large-tile {
+    width: 310px;
+    height: 310px;
+}
+.tile-wide.big-tile {
+    width: 470px;
+    height: 470px;
+}
+.tile-wide.super-tile {
+    width: 630px;
+    height: 630px;
+}
+.tile-wide .tile-content.flipVertical {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-wide:hover .tile-content.flipVertical,
+.tile-wide.hover .tile-content.flipVertical,
+.tile-wide.flip .tile-content.flipVertical {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-wide .tile-content.flipVertical {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-wide .tile-content.flipVertical .slide,
+.tile-wide .tile-content.flipVertical .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-wide .tile-content.flipVertical .slide {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.tile-wide .tile-content.flipVertical .slide-over {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-wide .tile-content.flipHorizontal {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-wide:hover .tile-content.flipHorizontal,
+.tile-wide.hover .tile-content.flipHorizontal,
+.tile-wide.flip .tile-content.flipHorizontal {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-wide .tile-content.flipHorizontal {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-wide .tile-content.flipHorizontal .slide,
+.tile-wide .tile-content.flipHorizontal .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-wide .tile-content.flipHorizontal .slide {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.tile-wide .tile-content.flipHorizontal .slide-over {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-wide .tile-badge {
+    position: absolute;
+    bottom: 0;
+    right: .625rem;
+    padding: .25rem .625rem;
+    z-index: 999;
+}
+.tile-wide .tile-label {
+    position: absolute;
+    bottom: 0;
+    left: .625rem;
+    padding: .425rem .25rem;
+    z-index: 999;
+}
+.tile-large {
+    width: 150px;
+    height: 150px;
+    display: block;
+    float: left;
+    margin: 5px;
+    background-color: #eeeeee;
+    box-shadow: inset 0 0 1px #FFFFCC;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: visible;
+    width: 310px;
+    height: 310px;
+}
+.tile-large:hover {
+    outline: #999999 solid 3px;
+}
+.tile-large:active {
+    outline: 0;
+}
+.tile-large.no-outline {
+    outline-color: transparent;
+}
+.tile-large.small-tile {
+    width: 70px;
+    height: 70px;
+}
+.tile-large.wide-tile {
+    width: 310px;
+    height: 150px;
+}
+.tile-large.wide-tile-v {
+    height: 310px;
+    width: 150px;
+}
+.tile-large.large-tile {
+    width: 310px;
+    height: 310px;
+}
+.tile-large.big-tile {
+    width: 470px;
+    height: 470px;
+}
+.tile-large.super-tile {
+    width: 630px;
+    height: 630px;
+}
+.tile-large .tile-content.flipVertical {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-large:hover .tile-content.flipVertical,
+.tile-large.hover .tile-content.flipVertical,
+.tile-large.flip .tile-content.flipVertical {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-large .tile-content.flipVertical {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-large .tile-content.flipVertical .slide,
+.tile-large .tile-content.flipVertical .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-large .tile-content.flipVertical .slide {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.tile-large .tile-content.flipVertical .slide-over {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-large .tile-content.flipHorizontal {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-large:hover .tile-content.flipHorizontal,
+.tile-large.hover .tile-content.flipHorizontal,
+.tile-large.flip .tile-content.flipHorizontal {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-large .tile-content.flipHorizontal {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-large .tile-content.flipHorizontal .slide,
+.tile-large .tile-content.flipHorizontal .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-large .tile-content.flipHorizontal .slide {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.tile-large .tile-content.flipHorizontal .slide-over {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-large .tile-badge {
+    position: absolute;
+    bottom: 0;
+    right: .625rem;
+    padding: .25rem .625rem;
+    z-index: 999;
+}
+.tile-large .tile-label {
+    position: absolute;
+    bottom: 0;
+    left: .625rem;
+    padding: .425rem .25rem;
+    z-index: 999;
+}
+.tile-big {
+    width: 150px;
+    height: 150px;
+    display: block;
+    float: left;
+    margin: 5px;
+    background-color: #eeeeee;
+    box-shadow: inset 0 0 1px #FFFFCC;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: visible;
+    width: 470px;
+    height: 470px;
+}
+.tile-big:hover {
+    outline: #999999 solid 3px;
+}
+.tile-big:active {
+    outline: 0;
+}
+.tile-big.no-outline {
+    outline-color: transparent;
+}
+.tile-big.small-tile {
+    width: 70px;
+    height: 70px;
+}
+.tile-big.wide-tile {
+    width: 310px;
+    height: 150px;
+}
+.tile-big.wide-tile-v {
+    height: 310px;
+    width: 150px;
+}
+.tile-big.large-tile {
+    width: 310px;
+    height: 310px;
+}
+.tile-big.big-tile {
+    width: 470px;
+    height: 470px;
+}
+.tile-big.super-tile {
+    width: 630px;
+    height: 630px;
+}
+.tile-big .tile-content.flipVertical {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-big:hover .tile-content.flipVertical,
+.tile-big.hover .tile-content.flipVertical,
+.tile-big.flip .tile-content.flipVertical {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-big .tile-content.flipVertical {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-big .tile-content.flipVertical .slide,
+.tile-big .tile-content.flipVertical .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-big .tile-content.flipVertical .slide {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.tile-big .tile-content.flipVertical .slide-over {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-big .tile-content.flipHorizontal {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-big:hover .tile-content.flipHorizontal,
+.tile-big.hover .tile-content.flipHorizontal,
+.tile-big.flip .tile-content.flipHorizontal {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-big .tile-content.flipHorizontal {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-big .tile-content.flipHorizontal .slide,
+.tile-big .tile-content.flipHorizontal .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-big .tile-content.flipHorizontal .slide {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.tile-big .tile-content.flipHorizontal .slide-over {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-big .tile-badge {
+    position: absolute;
+    bottom: 0;
+    right: .625rem;
+    padding: .25rem .625rem;
+    z-index: 999;
+}
+.tile-big .tile-label {
+    position: absolute;
+    bottom: 0;
+    left: .625rem;
+    padding: .425rem .25rem;
+    z-index: 999;
+}
+.tile-super {
+    width: 150px;
+    height: 150px;
+    display: block;
+    float: left;
+    margin: 5px;
+    background-color: #eeeeee;
+    box-shadow: inset 0 0 1px #FFFFCC;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: visible;
+    width: 630px;
+    height: 630px;
+}
+.tile-super:hover {
+    outline: #999999 solid 3px;
+}
+.tile-super:active {
+    outline: 0;
+}
+.tile-super.no-outline {
+    outline-color: transparent;
+}
+.tile-super.small-tile {
+    width: 70px;
+    height: 70px;
+}
+.tile-super.wide-tile {
+    width: 310px;
+    height: 150px;
+}
+.tile-super.wide-tile-v {
+    height: 310px;
+    width: 150px;
+}
+.tile-super.large-tile {
+    width: 310px;
+    height: 310px;
+}
+.tile-super.big-tile {
+    width: 470px;
+    height: 470px;
+}
+.tile-super.super-tile {
+    width: 630px;
+    height: 630px;
+}
+.tile-super .tile-content.flipVertical {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-super:hover .tile-content.flipVertical,
+.tile-super.hover .tile-content.flipVertical,
+.tile-super.flip .tile-content.flipVertical {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-super .tile-content.flipVertical {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-super .tile-content.flipVertical .slide,
+.tile-super .tile-content.flipVertical .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-super .tile-content.flipVertical .slide {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.tile-super .tile-content.flipVertical .slide-over {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-super .tile-content.flipHorizontal {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-super:hover .tile-content.flipHorizontal,
+.tile-super.hover .tile-content.flipHorizontal,
+.tile-super.flip .tile-content.flipHorizontal {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-super .tile-content.flipHorizontal {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-super .tile-content.flipHorizontal .slide,
+.tile-super .tile-content.flipHorizontal .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-super .tile-content.flipHorizontal .slide {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.tile-super .tile-content.flipHorizontal .slide-over {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-super .tile-badge {
+    position: absolute;
+    bottom: 0;
+    right: .625rem;
+    padding: .25rem .625rem;
+    z-index: 999;
+}
+.tile-super .tile-label {
+    position: absolute;
+    bottom: 0;
+    left: .625rem;
+    padding: .425rem .25rem;
+    z-index: 999;
+}
+.tile-small-x {
+    width: 70px;
+}
+.tile-square-x {
+    width: 150px;
+}
+.tile-wide-x {
+    width: 310px;
+}
+.tile-large-x {
+    width: 310px;
+}
+.tile-big-x {
+    width: 470px;
+}
+.tile-super-x {
+    width: 630px;
+}
+.tile-small-y {
+    height: 70px;
+}
+.tile-square-y {
+    height: 150px;
+}
+.tile-wide-y {
+    height: 310px;
+}
+.tile-large-y {
+    height: 310px;
+}
+.tile-big-y {
+    height: 470px;
+}
+.tile-super-y {
+    height: 630px;
+}
+.tile-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+    display: none;
+}
+.tile-content:first-child {
+    display: block;
+}
+.tile-content .live-slide {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+}
+.tile-content .live-slide:nth-child(1) {
+    display: block;
+}
+.tile-content.iconic .icon {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    font-size: 64px;
+    top: 50%;
+    margin-top: -40px;
+    left: 50%;
+    margin-left: -32px;
+    text-align: center;
+}
+.tile-small .tile-content.iconic .icon {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    margin-left: -16px;
+    margin-top: -16px;
+}
+.tile-content.image-set > img,
+.tile-content.image-set > .image-container {
+    margin: 0;
+    padding: 0;
+    width: 25% ;
+    height: 50% ;
+    float: left;
+    border: 1px #1e1e1e solid;
+}
+.tile-content.image-set > img:first-child,
+.tile-content.image-set > .image-container:first-child {
+    width: 50% ;
+    float: left;
+    height: 100% ;
+}
+.tile-content.slide-up > .slide,
+.tile-content.slide-down > .slide,
+.tile-content.slide-up-2 > .slide,
+.tile-content.slide-down-2 > .slide,
+.tile-content.slide-left > .slide,
+.tile-content.slide-right > .slide,
+.tile-content.slide-left-2 > .slide,
+.tile-content.slide-right-2 > .slide,
+.tile-content.slide-up > .slide-over,
+.tile-content.slide-down > .slide-over,
+.tile-content.slide-up-2 > .slide-over,
+.tile-content.slide-down-2 > .slide-over,
+.tile-content.slide-left > .slide-over,
+.tile-content.slide-right > .slide-over,
+.tile-content.slide-left-2 > .slide-over,
+.tile-content.slide-right-2 > .slide-over {
+    width: 100%;
+    height: inherit;
+    display: block;
+    position: absolute;
+    box-shadow: inset 0 0 1px #FFFFCC;
+}
+.tile-content.slide-up > .slide,
+.tile-content.slide-down > .slide,
+.tile-content.slide-up-2 > .slide,
+.tile-content.slide-down-2 > .slide,
+.tile-content.slide-left > .slide,
+.tile-content.slide-right > .slide,
+.tile-content.slide-left-2 > .slide,
+.tile-content.slide-right-2 > .slide {
+    top: 0;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.tile-content.slide-up:hover > .slide,
+.tile-content.slide-down:hover > .slide,
+.tile-content.slide-up-2:hover > .slide,
+.tile-content.slide-down-2:hover > .slide,
+.tile-content.slide-left:hover > .slide,
+.tile-content.slide-right:hover > .slide,
+.tile-content.slide-left-2:hover > .slide,
+.tile-content.slide-right-2:hover > .slide {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    transition: all 0.6s ease;
+}
+.tile-content.slide-up > .slide-over {
+    top: 100%;
+    z-index: 2;
+    height: 75%;
+    transition: all 0.6s ease;
+}
+.tile-content.slide-up:hover > .slide-over {
+    top: 25%;
+    transition: all 0.3s ease;
+}
+.tile-content.slide-up-2 > .slide-over {
+    top: 100%;
+    z-index: 2;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.tile-content.slide-up-2:hover > .slide {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    top: -100%;
+    transition: all 0.4s ease;
+}
+.tile-content.slide-up-2:hover > .slide-over {
+    top: 0;
+    transition: all 0.4s ease;
+}
+.tile-content.slide-down > .slide-over {
+    top: -100%;
+    z-index: 2;
+    height: 75%;
+    transition: all 0.6s ease;
+}
+.tile-content.slide-down:hover > .slide-over {
+    top: 0;
+    transition: all 0.3s ease;
+}
+.tile-content.slide-down-2 > .slide-over {
+    top: -100%;
+    z-index: 2;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.tile-content.slide-down-2:hover > .slide {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    top: 100%;
+    transition: all 0.4s ease;
+}
+.tile-content.slide-down-2:hover > .slide-over {
+    top: 0;
+    transition: all 0.4s ease;
+}
+.tile-content.slide-left > .slide-over {
+    left: -100%;
+    z-index: 2;
+    width: 75%;
+    height: 100%;
+    transition: all 0.6s ease;
+}
+.tile-content.slide-left:hover > .slide-over {
+    left: 0;
+    transition: all 0.3s ease;
+}
+.tile-content.slide-left-2 > .slide {
+    left: 0;
+    transition: all 0.3s ease;
+}
+.tile-content.slide-left-2 > .slide-over {
+    left: -100%;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.tile-content.slide-left-2:hover > .slide {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    left: 100%;
+    transition: all 0.4s ease;
+}
+.tile-content.slide-left-2:hover > .slide-over {
+    left: 0;
+    transition: all 0.4s ease;
+}
+.tile-content.slide-right > .slide-over {
+    left: 100%;
+    z-index: 2;
+    width: 75%;
+    height: 100%;
+    transition: all 0.6s ease;
+}
+.tile-content.slide-right:hover > .slide-over {
+    left: 25%;
+    transition: all 0.3s ease;
+}
+.tile-content.slide-right-2 > .slide {
+    left: 0;
+    transition: all 0.3s ease;
+}
+.tile-content.slide-right-2 > .slide-over {
+    left: 100%;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.tile-content.slide-right-2:hover > .slide {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    left: -100%;
+    transition: all 0.4s ease;
+}
+.tile-content.slide-right-2:hover > .slide-over {
+    left: 0;
+    transition: all 0.4s ease;
+}
+.tile-content.zooming .slide {
+    box-shadow: inset 0 0 1px #FFFFCC;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    transition: all 0.6s ease;
+}
+.tile-content.zooming .slide:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    transition: all 0.6s ease;
+}
+.tile-content.zooming-out .slide {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    transition: all 0.6s ease;
+}
+.tile-content.zooming-out .slide:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: all 0.6s ease;
+}
+.tile-small,
+.tile,
+.tile-square,
+.tile-wide,
+.tile-large,
+.tile-big,
+.tile-super {
+    overflow: visible;
+}
+.tile-small .tile-content.flipVertical,
+.tile .tile-content.flipVertical,
+.tile-square .tile-content.flipVertical,
+.tile-wide .tile-content.flipVertical,
+.tile-large .tile-content.flipVertical,
+.tile-big .tile-content.flipVertical,
+.tile-super .tile-content.flipVertical {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-small:hover .tile-content.flipVertical,
+.tile:hover .tile-content.flipVertical,
+.tile-square:hover .tile-content.flipVertical,
+.tile-wide:hover .tile-content.flipVertical,
+.tile-large:hover .tile-content.flipVertical,
+.tile-big:hover .tile-content.flipVertical,
+.tile-super:hover .tile-content.flipVertical,
+.tile-small.hover .tile-content.flipVertical,
+.tile.hover .tile-content.flipVertical,
+.tile-square.hover .tile-content.flipVertical,
+.tile-wide.hover .tile-content.flipVertical,
+.tile-large.hover .tile-content.flipVertical,
+.tile-big.hover .tile-content.flipVertical,
+.tile-super.hover .tile-content.flipVertical,
+.tile-small.flip .tile-content.flipVertical,
+.tile.flip .tile-content.flipVertical,
+.tile-square.flip .tile-content.flipVertical,
+.tile-wide.flip .tile-content.flipVertical,
+.tile-large.flip .tile-content.flipVertical,
+.tile-big.flip .tile-content.flipVertical,
+.tile-super.flip .tile-content.flipVertical {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-small .tile-content.flipVertical,
+.tile .tile-content.flipVertical,
+.tile-square .tile-content.flipVertical,
+.tile-wide .tile-content.flipVertical,
+.tile-large .tile-content.flipVertical,
+.tile-big .tile-content.flipVertical,
+.tile-super .tile-content.flipVertical {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-small .tile-content.flipVertical .slide,
+.tile .tile-content.flipVertical .slide,
+.tile-square .tile-content.flipVertical .slide,
+.tile-wide .tile-content.flipVertical .slide,
+.tile-large .tile-content.flipVertical .slide,
+.tile-big .tile-content.flipVertical .slide,
+.tile-super .tile-content.flipVertical .slide,
+.tile-small .tile-content.flipVertical .slide-over,
+.tile .tile-content.flipVertical .slide-over,
+.tile-square .tile-content.flipVertical .slide-over,
+.tile-wide .tile-content.flipVertical .slide-over,
+.tile-large .tile-content.flipVertical .slide-over,
+.tile-big .tile-content.flipVertical .slide-over,
+.tile-super .tile-content.flipVertical .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-small .tile-content.flipVertical .slide,
+.tile .tile-content.flipVertical .slide,
+.tile-square .tile-content.flipVertical .slide,
+.tile-wide .tile-content.flipVertical .slide,
+.tile-large .tile-content.flipVertical .slide,
+.tile-big .tile-content.flipVertical .slide,
+.tile-super .tile-content.flipVertical .slide {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.tile-small .tile-content.flipVertical .slide-over,
+.tile .tile-content.flipVertical .slide-over,
+.tile-square .tile-content.flipVertical .slide-over,
+.tile-wide .tile-content.flipVertical .slide-over,
+.tile-large .tile-content.flipVertical .slide-over,
+.tile-big .tile-content.flipVertical .slide-over,
+.tile-super .tile-content.flipVertical .slide-over {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tile-small .tile-content.flipHorizontal,
+.tile .tile-content.flipHorizontal,
+.tile-square .tile-content.flipHorizontal,
+.tile-wide .tile-content.flipHorizontal,
+.tile-large .tile-content.flipHorizontal,
+.tile-big .tile-content.flipHorizontal,
+.tile-super .tile-content.flipHorizontal {
+    -webkit-transform: perspective(1000px);
+    transform: perspective(1000px);
+    overflow: visible;
+}
+.tile-small:hover .tile-content.flipHorizontal,
+.tile:hover .tile-content.flipHorizontal,
+.tile-square:hover .tile-content.flipHorizontal,
+.tile-wide:hover .tile-content.flipHorizontal,
+.tile-large:hover .tile-content.flipHorizontal,
+.tile-big:hover .tile-content.flipHorizontal,
+.tile-super:hover .tile-content.flipHorizontal,
+.tile-small.hover .tile-content.flipHorizontal,
+.tile.hover .tile-content.flipHorizontal,
+.tile-square.hover .tile-content.flipHorizontal,
+.tile-wide.hover .tile-content.flipHorizontal,
+.tile-large.hover .tile-content.flipHorizontal,
+.tile-big.hover .tile-content.flipHorizontal,
+.tile-super.hover .tile-content.flipHorizontal,
+.tile-small.flip .tile-content.flipHorizontal,
+.tile.flip .tile-content.flipHorizontal,
+.tile-square.flip .tile-content.flipHorizontal,
+.tile-wide.flip .tile-content.flipHorizontal,
+.tile-large.flip .tile-content.flipHorizontal,
+.tile-big.flip .tile-content.flipHorizontal,
+.tile-super.flip .tile-content.flipHorizontal {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile-small .tile-content.flipHorizontal,
+.tile .tile-content.flipHorizontal,
+.tile-square .tile-content.flipHorizontal,
+.tile-wide .tile-content.flipHorizontal,
+.tile-large .tile-content.flipHorizontal,
+.tile-big .tile-content.flipHorizontal,
+.tile-super .tile-content.flipHorizontal {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+.tile-small .tile-content.flipHorizontal .slide,
+.tile .tile-content.flipHorizontal .slide,
+.tile-square .tile-content.flipHorizontal .slide,
+.tile-wide .tile-content.flipHorizontal .slide,
+.tile-large .tile-content.flipHorizontal .slide,
+.tile-big .tile-content.flipHorizontal .slide,
+.tile-super .tile-content.flipHorizontal .slide,
+.tile-small .tile-content.flipHorizontal .slide-over,
+.tile .tile-content.flipHorizontal .slide-over,
+.tile-square .tile-content.flipHorizontal .slide-over,
+.tile-wide .tile-content.flipHorizontal .slide-over,
+.tile-large .tile-content.flipHorizontal .slide-over,
+.tile-big .tile-content.flipHorizontal .slide-over,
+.tile-super .tile-content.flipHorizontal .slide-over {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile-small .tile-content.flipHorizontal .slide,
+.tile .tile-content.flipHorizontal .slide,
+.tile-square .tile-content.flipHorizontal .slide,
+.tile-wide .tile-content.flipHorizontal .slide,
+.tile-large .tile-content.flipHorizontal .slide,
+.tile-big .tile-content.flipHorizontal .slide,
+.tile-super .tile-content.flipHorizontal .slide {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.tile-small .tile-content.flipHorizontal .slide-over,
+.tile .tile-content.flipHorizontal .slide-over,
+.tile-square .tile-content.flipHorizontal .slide-over,
+.tile-wide .tile-content.flipHorizontal .slide-over,
+.tile-large .tile-content.flipHorizontal .slide-over,
+.tile-big .tile-content.flipHorizontal .slide-over,
+.tile-super .tile-content.flipHorizontal .slide-over {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.tile .tile-badge {
+    position: absolute;
+    bottom: 0;
+    right: .625rem;
+    padding: .25rem .625rem;
+    z-index: 999;
+}
+.tile .tile-label {
+    position: absolute;
+    bottom: 0;
+    left: .625rem;
+    padding: .425rem .25rem;
+    z-index: 999;
+}
+.tile-content .image-container,
+.tile-content .carousel {
+    box-shadow: inset 0 0 1px #FFFFCC;
+    width: 100%;
+    height: 100%;
+}
+[class*=tile-transform-] {
+    transition: all 0.22s ease;
+}
+.tile-transform-right {
+    -webkit-transform-origin: left 50%;
+    transform-origin: left 50%;
+}
+.tile.tile-transform-right {
+    -webkit-transform: perspective(500px) rotateY(0.138372rad) !important;
+    transform: perspective(500px) rotateY(0.138372rad) !important;
+}
+.tile-square.tile-transform-right {
+    -webkit-transform: perspective(500px) rotateY(0.138372rad) !important;
+    transform: perspective(500px) rotateY(0.138372rad) !important;
+}
+.tile-wide.tile-transform-right {
+    -webkit-transform: perspective(500px) rotateY(0.069186rad) !important;
+    transform: perspective(500px) rotateY(0.069186rad) !important;
+}
+.tile-large.tile-transform-right {
+    -webkit-transform: perspective(500px) rotateY(0.069186rad) !important;
+    transform: perspective(500px) rotateY(0.069186rad) !important;
+}
+.tile-big.tile-transform-right {
+    -webkit-transform: perspective(500px) rotateY(0.046124rad) !important;
+    transform: perspective(500px) rotateY(0.046124rad) !important;
+}
+.tile-super.tile-transform-right {
+    -webkit-transform: perspective(500px) rotateY(0.034593rad) !important;
+    transform: perspective(500px) rotateY(0.034593rad) !important;
+}
+.tile-small.tile-transform-right {
+    -webkit-transform: perspective(500px) rotateY(0.276744rad) !important;
+    transform: perspective(500px) rotateY(0.276744rad) !important;
+}
+.tile-transform-left {
+    -webkit-transform-origin: right 50%;
+    transform-origin: right 50%;
+}
+.tile.tile-transform-left {
+    -webkit-transform: perspective(500px) rotateY(-0.138372rad) !important;
+    transform: perspective(500px) rotateY(-0.138372rad) !important;
+}
+.tile-square.tile-transform-left {
+    -webkit-transform: perspective(500px) rotateY(-0.138372rad) !important;
+    transform: perspective(500px) rotateY(-0.138372rad) !important;
+}
+.tile-wide.tile-transform-left {
+    -webkit-transform: perspective(500px) rotateY(-0.069186rad) !important;
+    transform: perspective(500px) rotateY(-0.069186rad) !important;
+}
+.tile-large.tile-transform-left {
+    -webkit-transform: perspective(500px) rotateY(-0.069186rad) !important;
+    transform: perspective(500px) rotateY(-0.069186rad) !important;
+}
+.tile-big.tile-transform-left {
+    -webkit-transform: perspective(500px) rotateY(-0.046124rad) !important;
+    transform: perspective(500px) rotateY(-0.046124rad) !important;
+}
+.tile-super.tile-transform-left {
+    -webkit-transform: perspective(500px) rotateY(-0.034593rad) !important;
+    transform: perspective(500px) rotateY(-0.034593rad) !important;
+}
+.tile-small.tile-transform-left {
+    -webkit-transform: perspective(500px) rotateY(-0.276744rad) !important;
+    transform: perspective(500px) rotateY(-0.276744rad) !important;
+}
+.tile-transform-top {
+    -webkit-transform-origin: 50% bottom;
+    transform-origin: 50% bottom;
+}
+.tile.tile-transform-top {
+    -webkit-transform: perspective(500px) rotateX(0.138372rad) !important;
+    transform: perspective(500px) rotateX(0.138372rad) !important;
+}
+.tile-square.tile-transform-top {
+    -webkit-transform: perspective(500px) rotateX(0.138372rad) !important;
+    transform: perspective(500px) rotateX(0.138372rad) !important;
+}
+.tile-wide.tile-transform-top {
+    -webkit-transform: perspective(500px) rotateX(0.069186rad) !important;
+    transform: perspective(500px) rotateX(0.069186rad) !important;
+}
+.tile-large.tile-transform-top {
+    -webkit-transform: perspective(500px) rotateX(0.069186rad) !important;
+    transform: perspective(500px) rotateX(0.069186rad) !important;
+}
+.tile-big.tile-transform-top {
+    -webkit-transform: perspective(500px) rotateX(0.046124rad) !important;
+    transform: perspective(500px) rotateX(0.046124rad) !important;
+}
+.tile-super.tile-transform-top {
+    -webkit-transform: perspective(500px) rotateX(0.034593rad) !important;
+    transform: perspective(500px) rotateX(0.034593rad) !important;
+}
+.tile-small.tile-transform-top {
+    -webkit-transform: perspective(500px) rotateX(0.276744rad) !important;
+    transform: perspective(500px) rotateX(0.276744rad) !important;
+}
+.tile-transform-bottom {
+    -webkit-transform-origin: 50% top;
+    transform-origin: 50% top;
+}
+.tile.tile-transform-bottom {
+    -webkit-transform: perspective(500px) rotateX(-0.138372rad) !important;
+    transform: perspective(500px) rotateX(-0.138372rad) !important;
+}
+.tile-square.tile-transform-bottom {
+    -webkit-transform: perspective(500px) rotateX(-0.138372rad) !important;
+    transform: perspective(500px) rotateX(-0.138372rad) !important;
+}
+.tile-wide.tile-transform-bottom {
+    -webkit-transform: perspective(500px) rotateX(-0.069186rad) !important;
+    transform: perspective(500px) rotateX(-0.069186rad) !important;
+}
+.tile-large.tile-transform-bottom {
+    -webkit-transform: perspective(500px) rotateX(-0.069186rad) !important;
+    transform: perspective(500px) rotateX(-0.069186rad) !important;
+}
+.tile-big.tile-transform-bottom {
+    -webkit-transform: perspective(500px) rotateX(-0.046124rad) !important;
+    transform: perspective(500px) rotateX(-0.046124rad) !important;
+}
+.tile-super.tile-transform-bottom {
+    -webkit-transform: perspective(500px) rotateX(-0.034593rad) !important;
+    transform: perspective(500px) rotateX(-0.034593rad) !important;
+}
+.tile-small.tile-transform-bottom {
+    -webkit-transform: perspective(500px) rotateX(-0.276744rad) !important;
+    transform: perspective(500px) rotateX(-0.276744rad) !important;
+}
+.tile-area-scheme-dark {
+    background-color: #1d1d1d;
+}
+.tile-area-scheme-dark [class*=tile] {
+    outline-color: #373737;
+}
+.tile-area-scheme-darkBrown {
+    background-color: #63362f;
+}
+.tile-area-scheme-darkBrown [class*=tile] {
+    outline-color: #86493f;
+}
+.tile-area-scheme-darkCrimson {
+    background-color: #640024;
+}
+.tile-area-scheme-darkCrimson [class*=tile] {
+    outline-color: #970036;
+}
+.tile-area-scheme-darkViolet {
+    background-color: #57169a;
+}
+.tile-area-scheme-darkViolet [class*=tile] {
+    outline-color: #701cc7;
+}
+.tile-area-scheme-darkMagenta {
+    background-color: #81003c;
+}
+.tile-area-scheme-darkMagenta [class*=tile] {
+    outline-color: #b40054;
+}
+.tile-area-scheme-darkCyan {
+    background-color: #1b6eae;
+}
+.tile-area-scheme-darkCyan [class*=tile] {
+    outline-color: #228ada;
+}
+.tile-area-scheme-darkCobalt {
+    background-color: #00356a;
+}
+.tile-area-scheme-darkCobalt [class*=tile] {
+    outline-color: #004e9d;
+}
+.tile-area-scheme-darkTeal {
+    background-color: #004050;
+}
+.tile-area-scheme-darkTeal [class*=tile] {
+    outline-color: #006983;
+}
+.tile-area-scheme-darkEmerald {
+    background-color: #003e00;
+}
+.tile-area-scheme-darkEmerald [class*=tile] {
+    outline-color: #007100;
+}
+.tile-area-scheme-darkGreen {
+    background-color: #128023;
+}
+.tile-area-scheme-darkGreen [class*=tile] {
+    outline-color: #18ad2f;
+}
+.tile-area-scheme-darkOrange {
+    background-color: #bf5a15;
+}
+.tile-area-scheme-darkOrange [class*=tile] {
+    outline-color: #e77120;
+}
+.tile-area-scheme-darkRed {
+    background-color: #9a1616;
+}
+.tile-area-scheme-darkRed [class*=tile] {
+    outline-color: #c71c1c;
+}
+.tile-area-scheme-darkPink {
+    background-color: #9a165a;
+}
+.tile-area-scheme-darkPink [class*=tile] {
+    outline-color: #c71c74;
+}
+.tile-area-scheme-darkIndigo {
+    background-color: #4b0096;
+}
+.tile-area-scheme-darkIndigo [class*=tile] {
+    outline-color: #6400c9;
+}
+.tile-area-scheme-darkBlue {
+    background-color: #16499a;
+}
+.tile-area-scheme-darkBlue [class*=tile] {
+    outline-color: #1c5ec7;
+}
+.tile-area-scheme-lightBlue {
+    background-color: #4390df;
+}
+.tile-area-scheme-lightBlue [class*=tile] {
+    outline-color: #6faae6;
+}
+.tile-area-scheme-lightTeal {
+    background-color: #45fffd;
+}
+.tile-area-scheme-lightTeal [class*=tile] {
+    outline-color: #78fffd;
+}
+.tile-area-scheme-lightOlive {
+    background-color: #78aa1c;
+}
+.tile-area-scheme-lightOlive [class*=tile] {
+    outline-color: #97d623;
+}
+.tile-area-scheme-lightOrange {
+    background-color: #ffc194;
+}
+.tile-area-scheme-lightOrange [class*=tile] {
+    outline-color: #ffdec7;
+}
+.tile-area-scheme-lightPink {
+    background-color: #f472d0;
+}
+.tile-area-scheme-lightPink [class*=tile] {
+    outline-color: #f8a1e0;
+}
+.tile-area-scheme-grayed {
+    background-color: #585858;
+}
+.tile-area-scheme-grayed [class*=tile] {
+    outline-color: #727272;
+}

@@ -1,0 +1,56 @@
+{
+  "code":0,
+  "msg":"",
+  "data":[
+    {
+      "icon": "/static/img/icon/win10.png",
+      "title": "Win10-UI官网",
+      "openType": "openUrl",
+      "url":"http://win10ui.yuri2.cn"
+    },
+    {
+      "icon": "/static/img/icon/win10.png",
+      "title": "原版DEMO",
+      "openType": "openLink",
+      "url": "http://win10ui.yuri2.cn/src/demo.php"
+    },
+    {
+      "icon": "/static/img/icon/blogger.png",
+      "title": "Yuri2's Blog",
+      "openType": "openUrl",
+      "winIcon": "/static/img/icon/blogger.png",
+      "winTitle": "尤里2号的博客",
+      "url": "http://win10ui.yuri2.cn/src/demo.php"
+    },
+    {
+      "icon": "/static/img/icon/doc.png",
+      "title": "在线文档",
+      "openType": "openUrl",
+      "url": "http://win10ui.yuri2.cn/src/doc.php"
+    },
+    {
+      "icon": "/static/img/icon/kyzg.png",
+      "title": "开源中国",
+      "openType": "openUrl",
+      "url": "https://www.oschina.net/p/win10-ui"
+    },
+    {
+      "icon": "/static/img/icon/download.png",
+      "title": "快速获取",
+      "openType": "openLink",
+      "url": "https://github.com/yuri2peter/win10-ui/archive/master.zip"
+    },
+    {
+      "iconClass": "fa fa-user icon black-green",
+      "title": "示例登录页",
+      "openType": "openRouter",
+      "url": "/login"
+    },
+    {
+      "iconClass": "fa fa-gears icon purple",
+      "title": "创意工坊",
+      "openType": "openUrl",
+      "url": "http://win10ui.yuri2.cn/src/workshop.php"
+    }
+  ]
+}

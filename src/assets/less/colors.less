@@ -1,0 +1,15 @@
+@import (once) "vars";
+
+.op-default {
+	background-color: rgba(red(@cyan), green(@cyan), blue(@cyan), .7);
+}
+
+.generate-colors(@color-list-length);
+.generate-colors(@name, @i: 1) when (@i =< @color-list-length) {
+	@name: extract(@color-list, @i);
+
+	.fg-@{name} {color: @@name !important;}
+	.bg-@{name} {background-color: @@name !important;}
+
+	.generate-colors(@name, @i + 1);
+}

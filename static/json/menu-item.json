@@ -1,0 +1,50 @@
+{
+  "code":0,
+  "msg":"",
+  "data":[
+    {
+      "name":"API测试",
+      "iconClass":"red icon fa fa-wrench fa-fw",
+      "child":[
+        {
+          "name":"父子页沟通"
+        },
+        {
+          "name":"打开消息中心"
+        },
+        {
+          "name":"发送带回调的消息"
+        },
+        {
+          "name":"关闭菜单"
+        },
+        {
+          "name":"打开消息中心"
+        }
+      ]
+    },
+    {
+      "name":"辅助工具",
+      "iconClass":"blue icon fa fa-gavel fa-fw",
+      "child":[
+        {
+          "name":"桌面图标代码生成器"
+        },
+        {
+          "name":"磁贴代码生成器"
+        },
+        {
+          "name":"菜单代码生成器"
+        }
+      ]
+    },
+    {
+      "name":"关于",
+      "iconClass":"purple icon fa fa-info-circle fa-fw"
+    },
+    {
+      "name":"关闭",
+      "iconClass":"black icon fa fa-power-off fa-fw"
+    }
+  ]
+}
