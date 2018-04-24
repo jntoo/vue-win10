@@ -4,14 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import "./assets/less/tiles.less";
 import VueExtend from './vue-extend'
-
-import VueRouter from 'vue-router'
 import router from './router'
+import axios from 'axios'
 
 Vue.use(VueExtend)
 Vue.config.productionTip = false
 
-
+axios.defaults.baseURL = win10Config.baseUrl;
 
 /* eslint-disable no-new */
 new Vue({

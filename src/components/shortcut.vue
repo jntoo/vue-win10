@@ -1,13 +1,11 @@
 <template>
     <div class="shortcut" :class="{animated:!hidden, flipInX:!hidden}" @click="clickShortCut">
-        <i :class="short.iconClass" class="icon" v-if="short.iconClass"></i>
-        <img class="icon" :src="short.icon" v-if="short.icon" />
+        <i :class="short.iconClass" class="icon" v-if="short.iconClass" :style="short.iconStyle"></i>
+        <img class="icon" :src="formatImage(short.icon)" v-if="short.icon" :style="short.iconStyle" />
         <div class="title" v-text="short.title"></div>
     </div>
 </template>
-<style type="text/less">
 
-</style>
 <script>
     export default {
         name: "win10-shortcut",
@@ -27,6 +25,9 @@
         watch: {},
         computed: {},
         methods: {
+            formatImage(src){
+                return  win10Config.baseUrl+src;
+            },
             clickShortCut(e){
                 this.$emit('click-short' , this.short);
             }

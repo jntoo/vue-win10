@@ -27,6 +27,7 @@
                     </template>
                 </div>
                 <div class="blocks">
+                    <!--
                     <win10-tile-area class="tile-area-scheme-dark">
                         <win10-tile-group width="2">
                             <win10-tile-title>General</win10-tile-title>
@@ -146,7 +147,6 @@
                         <win10-tile-group>
                             <win10-tile-title>Games</win10-tile-title>
                             <win10-tile-container>
-
                                 <win10-tile class="bg-">
                                     <win10-tile-content>
                                         <img src="/static/images/grid2.jpg" data-role="fitImage" data-format="square">
@@ -181,6 +181,7 @@
                             </win10-tile-container>
                         </win10-tile-group>
                     </win10-tile-area>
+                    -->
                 </div>
                 <div id="win10-menu-switcher"></div>
             </div>
@@ -493,11 +494,18 @@
     import Vue from 'vue'
     Vue.use(Win10Tile)
     var timer = null;
+
+    window.updateSystemMemu = function () {
+        // 绑定更新菜单
+        Win10.updateMenu();
+    }
+
     export default {
         name: 'App',
         data () {
             return {
                 win10Menu:[
+                    /*
                     {
                         "name":"API测试",
                         "iconClass":"red icon fa fa-wrench fa-fw",
@@ -544,6 +552,7 @@
                         "name":"关闭",
                         "iconClass":"black icon fa fa-power-off fa-fw"
                     }
+                    */
                 ],
                 hiddenWin10Menu:true,
                 onNewMsg:false,
@@ -609,8 +618,10 @@
                 }
             },
             openRouter(short){
-
                 this.$router.push(short.url);
+            },
+            openLink(short){
+                window.open(short.url);
             },
             openUrl(short){
                 this.countTask++;
@@ -620,6 +631,9 @@
                 var url = short.url;
                 var areaAndOffset = short.areaAndOffset;
                 var area,offset;
+                if(url.substr(0,1) == '/'){
+                    url = win10Config.baseUrl+url;
+                }
                 //console.log(this.countTask);
                 if (this.isSmallScreen() || areaAndOffset==='max') {
                     area = ['100%', (document.body.clientHeight - 40) + 'px'];
@@ -779,6 +793,23 @@
                     content,
                     callback:handle_click
                 })
+            },
+            updateMenu () {
+                axios.get(win10Config.shortCutUrl).then(response=>{
+                    //console.log(response);
+                    if(response.data.code == 0){
+                        this.handlerShortcut(response.data.data);
+                    }
+                    this.renderShortcuts();
+                }).catch(response=>{
+                });
+                axios.get(win10Config.menuCutUrl).then(res=>{
+                    if(res.data.code == 0){
+                        this.win10Menu = res.data.data;
+                        //this.handlerMenuCut(res.data.data);
+                    }
+                    this.renderShortcuts();
+                });
             }
         },
         created(){
@@ -794,18 +825,10 @@
         },
         mounted(){
             this._isLoaded = true;
-            axios.get("/static/json/shortcut.json").then(response=>{
-                //console.log(response);
-                if(response.data.code == 0){
-                    this.handlerShortcut(response.data.data);
-                }
-                this.renderShortcuts();
-            }).catch(response=>{
-            });
             Vue.$eventUntil.addEvent(window,'resize' ,  ()=> {
                 this.renderShortcuts();
             });
-            this.newMsg('官方交流','欢迎各位大侠加入讨论：<a target="_blank" href="https://jq.qq.com/?_wv=1027&amp;k=4Er0u8i">[点击加入]205546163</a>');
+            this.updateMenu();
         },
         components: {
             Shortcut,

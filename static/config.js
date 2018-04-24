@@ -13,9 +13,10 @@
 
 (function (global) {
     var config = {
-        loginUrl:'',     // 用以上结构返回
-        shortCutUrl:'', // 获取线上WIN10图标
-        menuCutUrl:''   // 开始菜单Url
+        baseUrl:'http://127.0.0.205',
+        loginUrl:'http://127.0.0.205/admin.php?s=/adminc/login/sign',    // 用以上结构返回
+        shortCutUrl:'http://127.0.0.205/admin.php?s=/adminc/index/shortcut', // 获取线上WIN10图标
+        menuCutUrl:'http://127.0.0.205/admin.php?s=/adminc/index/startmenu'   // 开始菜单Url
     }
-    window.jntooWin10 = config;
+    global.win10Config = config;
 })(window)
