@@ -219,6 +219,8 @@
                 </div>
             </div>
         </div>
+
+
         <!--
         <div class="wrapp" >
             <div class="text">
@@ -799,16 +801,24 @@
                     //console.log(response);
                     if(response.data.code == 0){
                         this.handlerShortcut(response.data.data);
+                        this.renderShortcuts();
+                    }else if(response.data.code == 1056){
+                        // 登录超时
+                        this.$router.push('/login');
                     }
-                    this.renderShortcuts();
+
                 }).catch(response=>{
                 });
                 axios.get(win10Config.menuCutUrl).then(res=>{
                     if(res.data.code == 0){
                         this.win10Menu = res.data.data;
                         //this.handlerMenuCut(res.data.data);
+                        this.renderShortcuts();
+                    }else if(response.data.code == 1056){
+                        // 登录超时
+                        this.$router.push('/login');
                     }
-                    this.renderShortcuts();
+
                 });
             }
         },

@@ -14,7 +14,7 @@
 (function (global) {
     var config = {
         baseUrl:'http://127.0.0.205',
-        loginUrl:'http://127.0.0.205/admin.php?s=/adminc/login/sign',    // 用以上结构返回
+        loginUrl:'http://127.0.0.205/admin.php?s=/index/login/sign',    // 用以上结构返回
         shortCutUrl:'http://127.0.0.205/admin.php?s=/adminc/index/shortcut', // 获取线上WIN10图标
         menuCutUrl:'http://127.0.0.205/admin.php?s=/adminc/index/startmenu'   // 开始菜单Url
     }

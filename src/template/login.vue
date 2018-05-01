@@ -6,13 +6,13 @@
                 <img src="/static/img/avatar.jpg" class="content"/>
             </div>
             <p style="font-size: 24px;color: white;text-align: center">APP后台管理系统</p>
-            <form target="_self" method="get" action="#">
+            <form method="get" action="javascript:;" @submit.stop.prevent="postLogin">
                 <!--用户名-->
-                <input type="text" placeholder="请输入登录名" class="login-username">
+                <input type="text" placeholder="请输入登录名" v-model="username" class="login-username">
                 <!--密码-->
-                <input type="password" placeholder="请输入密码" class="login-password">
+                <input type="password" placeholder="请输入密码" v-model="password" class="login-password">
                 <!--登陆按钮-->
-                <input type="submit"  value="登录" id="btn-login" class="login-submit"/>
+                <input type="submit"  value="登录" :disabled="isLoading" id="btn-login" class="login-submit"/>
             </form>
         </div>
     </div>
@@ -97,14 +97,47 @@
     }
 </style>
 <script>
+    import axios from 'axios'
     export default {
         name: "win10-login",
         data(){
-            return {}
+            return {
+                username:'',
+                password:'',
+                isLoading:false
+            }
         },
         watch: {},
         computed: {},
-        methods: {},
+        methods: {
+            postLogin(){
+                var username = this.username;
+                var password = this.password;
+                if(username == ''){
+                    layer.msg('请输入用户名')
+                    return;
+                }
+                if(password == ''){
+                    layer.msg('请输入密码');
+                    return;
+                }
+                this.isLoading = true;
+                this.$http.post(win10Config.loginUrl , {
+                    username:username,
+                    password,
+                    auto_login:1
+                }).then((res)=>{
+                    if(res.data.code>0){
+                        layer.msg(res.data.msg);
+                    }else{
+                        this.$router.push('/');
+                    }
+                    this.isLoading = false;
+                }).catch(()=>{
+                    this.isLoading = false;
+                });
+            }
+        },
         created(){
 
         },
